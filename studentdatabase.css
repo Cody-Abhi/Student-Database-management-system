@@ -1,0 +1,86 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.head {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.head h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #4a4a4a;
+}
+
+.head p {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Form Section */
+.addstd {
+    background-color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.addstd h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Labels and Inputs */
+.addstd label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.addstd input,
+.addstd select {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    transition: border-color 0.2s ease;
+}
+
+.addstd input:focus,
+.addstd select:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* Submit Button */
+.addstd button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1em;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addstd button:hover {
+    background-color: #357ab7;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Database Management System</title>
+    <link rel="stylesheet" href="static/studentdatabase.css">
+</head>
+<body>
+    <section class="head">
+        <h1>Student Database Management System</h1>
+        <p>Welcome to the Student Database Management System. Here you can manage student records efficiently.</p>
+    </section>
+    <section>
+        <form action="/submit" class="addstd" method="POST">
+            <h2>Add Student</h2>
+            <br>
+            <label for="rollno">Roll no.</label>
+            <br>
+            <input type="text" id="rollno" name="roll_number" required>
+            <br>
+            <label for="name">Name:</label>
+            <br>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="roll">Age:</label>
+            <br>
+            <input type="number" id="age" name="age" required>
+            <br>
+            <label for="Branch">Branch:</label>
+            <br>
+            <input type="text" id="Branch" name="branch" required>
+            <br>
+            <lable for="email">Email</lable>
+            <br>
+            <input type="email" name="email" id="email">
+            <br>
+            <label for="gender">Gender:</label>
+            <br>
+            <select id="gender" name="gender" required>
+            <br>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+            <label for="address">Address:</label>
+            <br>
+            <input type="text" id="address" name="address" required>
+            <br>
+            <button type="submit">Add Student</button>
+            
+        </form>
+        
+    </section>
+</body>
+</html>
