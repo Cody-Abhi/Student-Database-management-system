@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Students</title>
+  <!-- <link rel="stylesheet" href="/static/style.css"> -->
+  <link rel="stylesheet" href="/static/style2.css">
+</head>
+<body class="page">
+
+  <h2 class="title">All Student Records</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Branch</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in students %}
+      <tr>
+        <td>{{ s[0] }}</td>
+        <td>{{ s[1] }}</td>
+        <td>{{ s[2] }}</td>
+        <td>{{ s[3] }}</td>
+        <td>{{ s[4] }}</td>
+        <td>{{ s[5] }}</td>
+        <td>{{ s[6] }}</td>
+        
+  
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+    <button class="btn"><a href="/" class="link">Back to Home</a></button>
+
+
+</body>
+</html>

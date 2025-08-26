@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Result</title>
+  <!-- <link rel="stylesheet" href="/static/style.css"> -->
+  <link rel="stylesheet" href="/static/style2.css">
+</head>
+<body class="page">
+
+  <h2 class="title">Search Result</h2>
+
+  {% if students %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Branch</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in students %}
+      <tr>
+        <td>{{ s[0] }}</td>
+        <td>{{ s[1] }}</td>
+        <td>{{ s[2] }}</td>
+        <td>{{ s[3] }}</td>
+        <td>{{ s[4] }}</td>
+        <td>{{ s[5] }}</td>
+        <td>{{ s[6] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+    <p class="not-found">No student found matching your input.</p>
+  {% endif %}
+
+  <!-- <a href="/templates/index.html" class="link">Back to Home</a> -->
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student DB</title>
+
+  <link rel="stylesheet" href="/static/style2.css">
+</head>
+<body class="page">
+  <header>
+    <h2 class="title"><strong>Student Management System</strong></h2>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/studentslist">View Students</a>
+      
+      
+    </nav>
+    
+  </header>
+  
+  <h3 class="subtitle">Add New Student</h3>
+  <form action="/submit" method="post" class="form add-form">
+    <label for="roll_number">Roll No</label>
+    <input name="roll_number" placeholder="Enter your Roll No" class="input">
+    <label for="name">Name</label>
+    <input name="name" placeholder="Enter your Name" class="input">
+    <label for="age">Age</label>
+    <input name="age" type="number" placeholder="Enter your Age" class="input">
+    <label for="branch">Branch</label>
+    <input name="branch" placeholder="Enter your Branch" class="input">
+    <label for="email">Email</label>
+    <input name="email" type="email" placeholder="Enter your Email" class="input">
+    <label for="gender">Gender</label>
+    <select name="gender" class="input">
+      <option value="select gender">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    <label for="address">Address</label>
+    <input  name="address" placeholder="Enter your Address" class="input">
+    <button type="submit" class="btn">Add</button>
+    <br>
+    <br>
+    <button type="reset" class="btn">Reset</button>
+
+  </form>
+
+  <h3 class="subtitle" >Search Student</h3>
+  <form action="/search" method="post" class="form search-form">
+    <input name="keyword" placeholder="Enter Name, Roll, Email..." class="input">
+    <button type="submit" class="btn">Search</button>
+  </form>
+
+  <!-- <h3 class="subtitle">Update Student</h3>
+  <form action="/update_form" method="post" class="form update-form">
+    <input name="keyword" placeholder="Enter Name, Roll, Email..." class="input">
+    <button type="submit" class="btn">Search</button>
+  </form> -->
+
+  <h3 class="subtitle">Delete Student</h3>
+  <form action="/delete" method="post" class="form delete-form">
+    <input name="keyword" placeholder="Enter Name, Roll, Email..." class="input">
+    <button type="submit" class="btn delete-btn">Delete</button>
+  </form>
+
+  
+
+
+
+ 
+
+  <footer>
+  Created by - Abhinav Srivastava
+</footer>
+
+</body>
+</html>

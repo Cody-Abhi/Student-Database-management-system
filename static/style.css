@@ -1,0 +1,237 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #111;
+  padding: 15px 0;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  padding: 8px 16px;
+  transition: 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #00f0ff;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #00f0ff;
+}
+
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Header */
+h2.title {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2.5em;
+  color: #fff;
+  position: relative;
+}
+
+h2.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00f0ff, transparent);
+  transform: translateX(-50%);
+  animation: glow-bottom 3s linear infinite;
+}
+
+@keyframes glow-bottom {
+  0% { background-position: 0 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Subtitles */
+h3.subtitle {
+  text-align: center;
+  margin: 20px 0 10px;
+  color: #ccc;
+}
+
+/* Forms */
+.form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  border: 2px solid #00f0ff;
+  position: relative;
+  animation: glow-box 5s linear infinite;
+}
+
+@keyframes glow-box {
+  0% { box-shadow: 0 0 10px #00f0ff; }
+  50% { box-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff; }
+  100% { box-shadow: 0 0 10px #00f0ff; }
+}
+
+.input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: #111;
+  color: #00f0ff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus, select:focus {
+  border: 2px solid #00f0ff;
+  box-shadow: 0 0 10px #00f0ff;
+  animation: glow-border 2s linear infinite;
+}
+
+@keyframes glow-border {
+  0% { box-shadow: 0 0 5px #00f0ff; }
+  50% { box-shadow: 0 0 15px #00f0ff; }
+  100% { box-shadow: 0 0 5px #00f0ff; }
+}
+
+/* Buttons */
+.btn {
+  background: #00f0ff;
+  color: #111;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #00aaff;
+  box-shadow: 0 0 10px #00f0ff;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background: #ff4c4c;
+}
+
+.delete-btn:hover {
+  background: #ff1a1a;
+  box-shadow: 0 0 10px #ff4c4c;
+}
+
+/* Table */
+.table {
+  width: 95%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 15px #00f0ff;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.table th, .table td {
+  padding: 15px;
+  border: 1px solid #00f0ff;
+  color: #fff;
+  text-align: center;
+}
+
+.table th {
+  background: #111;
+}
+
+.table tr:hover {
+  background: rgba(0, 240, 255, 0.1);
+}
+
+/* Not Found */
+.not-found {
+  text-align: center;
+  color: #ff9999;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: #111;
+  text-align: center;
+  color: #00f0ff;
+  font-weight: bold;
+  box-shadow: 0 -2px 10px rgba(0, 255, 255, 0.4);
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00f0ff, transparent);
+  transform: translateX(-50%);
+  animation: glow-top 3s linear infinite;
+}
+
+@keyframes glow-top {
+  0% { background-position: 0 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Surprise Element in Footer */
+footer::after {
+  content: '✨ Keep Learning, Keep Growing ✨';
+  display: block;
+  font-size: 0.9em;
+  margin-top: 8px;
+  color: #eee;
+  animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
